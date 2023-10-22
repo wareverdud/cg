@@ -46,8 +46,8 @@ void cg::renderer::rasterization_renderer::render()
 	rasterizer->pixel_shader = [](cg::vertex data, float z) {
 		return cg::color{
 					data.ambient_r,
-					data.ambient_b,
-					data.ambient_g};
+					data.ambient_g,
+					data.ambient_b};
 	};
 
 	auto start = std::chrono::high_resolution_clock::now();
